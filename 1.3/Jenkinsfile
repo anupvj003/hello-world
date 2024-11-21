@@ -38,7 +38,7 @@ stages {
      //   input id: 'OSPI', message: 'Did u keep in OSPI mode ?', ok: 'Yes', parameters: [string(defaultValue: '50.02', description: 'Deploy to the customer!', name: 'User_ip', trim: true)], submitter: 'Yes'
     
     steps {
-        echo "print $Release and $Build_ID and mainly $env.ver"
+        echo "print $Build_ID and mainly $User_ip"
     }
     
    }
