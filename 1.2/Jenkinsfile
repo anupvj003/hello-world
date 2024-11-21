@@ -7,7 +7,9 @@ pipeline{
 stages {
     
    stage("Stage 1"){
-    env.ver=5
+    environment{
+        env.ver=5
+    }
     steps {
         echo "print $Release and $Build_ID and mainly $env.ver"
     }
