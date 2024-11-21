@@ -1,0 +1,26 @@
+pipeline{
+
+stages {
+    
+   stage("Build"){
+        echo "Build is $Build_ID"
+   }
+    stage("Test"){
+        echo "Just Testing print"
+    }
+    stage("Deploy")
+    {
+        input id: 'OSPI', message: 'Did u keep in OSPI mode ?', ok: 'Yes', parameters: [string(defaultValue: '50.02', description: 'Deploy to the customer!', name: 'User_ip', trim: true)], submitter: 'Yes'
+    }
+    steps {
+        echo "print $Release and $Build_ID and mainly $env.ver"
+    }
+    
+   }
+   
+    stage("docker version"){
+        steps {
+            sh "docker --version"
+        }
+    }
+}
