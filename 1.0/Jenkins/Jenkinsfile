@@ -7,13 +7,19 @@ pipeline{
 stages {
     
    stage("Stage 1"){
-    echo "print $Release and $Build_ID"
-   }
-   stage("bat call"){
-    bat "echo $Release and $Build_ID"
+
+    steps {
+
+        echo "print $Release and $Build_ID"
+
     }
+    
+   }
+   
     stage("docker version"){
-        sh "docker --version"
+        steps {
+            sh "docker --version"
+        }
     }
 }
 
