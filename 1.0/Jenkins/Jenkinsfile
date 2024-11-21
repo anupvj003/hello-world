@@ -1,0 +1,9 @@
+node {
+    
+    stage('Git checkout') { // for display purposes
+    
+    git branch: 'main', changelog: false, poll: false, url: 'https://github.com/anupvj003/hello-world.git'
+        
+    }
+   
+}
