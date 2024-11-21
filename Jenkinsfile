@@ -1,0 +1,24 @@
+pipeline{
+    agent any
+    environment{
+        Release = "50.01"
+    }
+
+stages {
+    
+   stage("Stage 1"){
+    env.ver=5
+    steps {
+        echo "print $Release and $Build_ID and mainly $env.ver"
+    }
+    
+   }
+   
+    stage("docker version"){
+        steps {
+            sh "docker --version"
+        }
+    }
+}
+
+}
