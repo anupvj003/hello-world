@@ -3,7 +3,7 @@ pipeline{
     environment{
         Release = "50.01"
     }
-}
+
 stages {
     
    stage("Stage 1"){
@@ -15,4 +15,6 @@ stages {
     stage("docker version"){
         sh "docker --version"
     }
+}
+
 }
